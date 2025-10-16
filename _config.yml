@@ -1,3 +1,18 @@
-theme: jekyll-theme-minimal
-title: MetaMachines
-description: First steps
+title: My GitHub Pages Site
+description: A simple starter site built with Jekyll.
+theme: jekyll-theme-minimal  # Change to any built-in theme like minima, slate, etc.
+logo: /assets/logo.png  # Optional: add an image later
+
+# Navigation (add more pages as needed)
+nav:
+  - name: Home
+    link: /
+  - name: About
+    link: /about.html
+
+# Exclude unnecessary files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"> <!-- Simple CSS framework -->
+  <style>
+    body { padding: 20px; }
+    nav ul { list-style: none; padding: 0; }
+    nav li { display: inline; margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      {% for item in site.nav %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>&copy; {{ 'now' | date: '%Y' }} Your Name. Built with <a href="https://jekyllrb.com">Jekyll</a>.</p>
+  </footer>
+</body>
+</html>
